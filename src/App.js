@@ -50,7 +50,7 @@ class BooksApp extends React.Component {
           path="/"
           render={() => (
             <div>
-              <ListBooks />
+              <ListBooks books={this.state.books} />
               <div className="open-search">
                 <Link to="/search">
                   <button>Add a book</button>
