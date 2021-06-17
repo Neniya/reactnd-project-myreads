@@ -3,6 +3,7 @@ import * as BooksAPI from "./BooksAPI";
 import "./App.css";
 import ListBooks from "./ListBooks";
 import { Route, Link } from "react-router-dom";
+import BooksGrid from "./Booksgrid";
 
 class BooksApp extends React.Component {
   state = {
@@ -40,7 +41,7 @@ class BooksApp extends React.Component {
                 </div>
               </div>
               <div className="search-books-results">
-                <ol className="books-grid" />
+                <BooksGrid books={this.state.books} isShelf={false} />
               </div>
             </div>
           )}
