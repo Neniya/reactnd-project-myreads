@@ -2,7 +2,8 @@ import React from "react";
 import * as BooksAPI from "./BooksAPI";
 import "./App.css";
 import ListBooks from "./ListBooks";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
+import OpenSearch from "./OpenSearchButton";
 
 import SearchBook from "./SearchBook";
 
@@ -31,11 +32,7 @@ class BooksApp extends React.Component {
           render={() => (
             <div>
               <ListBooks books={this.state.books} />
-              <div className="open-search">
-                <Link to="/search">
-                  <button>Add a book</button>
-                </Link>
-              </div>
+              <OpenSearch />
             </div>
           )}
         />
