@@ -1,19 +1,15 @@
 import React, { Component } from "react";
-import Book from "./Book";
+import BooksGrid from "./Booksgrid";
 
 class BookshelfBooks extends Component {
   render() {
     return (
       <div className="bookshelf-books">
-        <ol className="books-grid">
-          {this.props.books
-            .filter((book) => book.shelf === this.props.shelf)
-            .map((book) => (
-              <li key={book.id}>
-                <Book book={book} />
-              </li>
-            ))}
-        </ol>
+        <BooksGrid
+          shelf={this.props.shelf}
+          books={this.props.books}
+          isShelf={true}
+        />
       </div>
     );
   }

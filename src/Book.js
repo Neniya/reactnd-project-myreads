@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import BookTop from "./BookTop";
 import BookTitle from "./BookTitle";
-import BookAuthors from "./BookAutors";
+import BookAuthors from "./BookAuthors";
 
 class Book extends Component {
   render() {
