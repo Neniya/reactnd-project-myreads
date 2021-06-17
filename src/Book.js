@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import BookTop from "./BookTop";
 import BookTitle from "./BookTitle";
+import BookAuthors from "./BookAutors";
 
 class Book extends Component {
   render() {
@@ -9,7 +10,7 @@ class Book extends Component {
       <div className="book">
         <BookTop book={book} />
         <BookTitle title={book.title} />
-        <div className="book-authors">Harper Lee</div>
+        <BookAuthors authors={book.authors} />
       </div>
     );
   }
