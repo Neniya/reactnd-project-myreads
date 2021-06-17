@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BookTop from "./BookTop";
+import BookTitle from "./BookTitle";
 
 class Book extends Component {
   render() {
@@ -7,7 +8,7 @@ class Book extends Component {
     return (
       <div className="book">
         <BookTop book={book} />
-        <div className="book-title">To Kill a Mockingbird</div>
+        <BookTitle title={book.title} />
         <div className="book-authors">Harper Lee</div>
       </div>
     );
