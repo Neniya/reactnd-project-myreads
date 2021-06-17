@@ -6,7 +6,7 @@ class BookAuthors extends Component {
     return (
       <div className="book-authors">
         {this.props.authors.map((author) => (
-          <Author author={author} />
+          <Author key={author} author={author} />
         ))}
       </div>
     );
