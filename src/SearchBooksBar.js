@@ -9,7 +9,7 @@ class SearchBookBar extends Component {
         <Link to="/">
           <button className="close-search">Close</button>
         </Link>
-        <SearchBookInputWrapper />
+        <SearchBookInputWrapper searchBooks={this.props.searchBooks} />
       </div>
     );
   }

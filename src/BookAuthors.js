@@ -5,9 +5,10 @@ class BookAuthors extends Component {
   render() {
     return (
       <div className="book-authors">
-        {this.props.authors.map((author) => (
-          <Author key={author} author={author} />
-        ))}
+        {this.props.authors &&
+          this.props.authors.map((author) => (
+            <Author key={author} author={author} />
+          ))}
       </div>
     );
   }
