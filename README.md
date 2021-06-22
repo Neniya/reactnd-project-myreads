@@ -1,30 +1,30 @@
 # MyReads Project
 
 This is the project for Udacity's React Fundamentals course.
-In the MyReads app is a bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read.
+The MyReads app is a bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read.
 I have used React to build the application.
 The starter code provided an API server and client library that I have used to persist information and interact with the application.
 
 The application:
 
-1. Has the main page where user can see books on three shelfs:
+1. Has the main page where user can see books on three shelves:
 
 - currently reading
 - want to read
 - read
 
- <img src="img/main.png" width="350"/>
-
-2. Has the search page where user can serch books by book's name and authors
-
- <img src="img/search.png" width="350"/>
-
-3. There is opportunity to change a book shelf for each book on both main and search page. Both page shows same and correct shelf possition of the books. If book isn't on one of three user's shelfs
-   the option 'none' is selected in a shelf changer menu.
-
- <img src="img/read.png" width="150"/>
-
-  <img src="img/none.png" width="150"/>
+<img src="img/main.png" width="350"/>
+ 
+2. Has the search page where user can search books by book's name and authors
+ 
+<img src="img/search.png" width="350"/>
+ 
+3. There is an opportunity to change a bookshelf for each book on both main and search pages. Both pages show the same and correct shelf position of the books. If book isn't on one of three user's shelfs
+  the option 'none' is selected in a shelf changer menu.
+ 
+<img src="img/read.png" width="150"/>
+ 
+<img src="img/none.png" width="150"/>
 
 ## Getting Started
 
