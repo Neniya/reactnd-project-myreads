@@ -8,7 +8,11 @@ class Book extends Component {
     const book = this.props.book;
     return (
       <div className="book">
-        <BookTop book={book} />
+        <BookTop
+          book={book}
+          updateBookShelf={this.props.updateBookShelf}
+          whichShelf={this.props.whichShelf}
+        />
         <BookTitle title={book.title} />
         <BookAuthors authors={book.authors} />
       </div>

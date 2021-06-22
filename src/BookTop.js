@@ -7,7 +7,11 @@ class BookTop extends Component {
     return (
       <div className="book-top">
         <BookCover book={this.props.book} />
-        <BookShelfChanger />
+        <BookShelfChanger
+          book={this.props.book}
+          updateBookShelf={this.props.updateBookShelf}
+          whichShelf={this.props.whichShelf}
+        />
       </div>
     );
   }

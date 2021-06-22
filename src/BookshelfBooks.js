@@ -9,6 +9,7 @@ class BookshelfBooks extends Component {
           shelf={this.props.shelf}
           books={this.props.books}
           isShelf={true}
+          updateBookShelf={this.props.updateBookShelf}
         />
       </div>
     );

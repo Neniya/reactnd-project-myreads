@@ -6,21 +6,36 @@ import SearchBookBar from "./SearchBooksBar";
 
 class SearchBook extends Component {
   state = {
-    showingBooks: this.props.books,
+    showingBooks: [],
   };
 
   searchBooks = (query) => {
     BooksAPI.search(query).then((showingBooks) => {
-      console.log(showingBooks);
       this.setState({ showingBooks });
     });
   };
+
+  whichShelf = (book) => {
+    let shelf = "none";
+    const bookOnShelf = this.props.books.find((b) => b.id === book.id);
+
+    if (bookOnShelf) {
+      shelf = bookOnShelf.shelf;
+    }
+    return shelf;
+  };
+
   render() {
     return (
       <div className="search-books">
         <SearchBookBar searchBooks={this.searchBooks} />
         <div className="search-books-results">
-          <BooksGrid books={this.state.showingBooks} isShelf={false} />
+          <BooksGrid
+            books={this.state.showingBooks}
+            isShelf={false}
+            updateBookShelf={this.props.updateBookShelf}
+            whichShelf={this.whichShelf}
+          />
         </div>
       </div>
     );

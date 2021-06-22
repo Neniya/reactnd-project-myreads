@@ -7,7 +7,10 @@ class ListBooks extends Component {
     return (
       <div className="list-books">
         <AppTitle />
-        <ListBooksContent books={this.props.books} />
+        <ListBooksContent
+          books={this.props.books}
+          updateBookShelf={this.props.updateBookShelf}
+        />
       </div>
     );
   }
