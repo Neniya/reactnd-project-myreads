@@ -11,6 +11,7 @@ class SearchBook extends Component {
 
   searchBooks = (query) => {
     BooksAPI.search(query).then((showingBooks) => {
+      console.log(showingBooks);
       if ((showingBooks && "error" in showingBooks) || !showingBooks) {
         showingBooks = [];
       }

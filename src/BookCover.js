@@ -8,7 +8,11 @@ class BookCover extends Component {
         style={{
           width: 128,
           height: 193,
-          backgroundImage: `url(${this.props.book.imageLinks.smallThumbnail})`,
+          backgroundImage: `url(${
+            "imageLinks" in this.props.book
+              ? this.props.book.imageLinks.smallThumbnail
+              : this.props.book.previewLink
+          })`,
         }}
       />
     );
