@@ -1,6 +1,11 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class SearchBookInputWrapper extends Component {
+  static propTypes = {
+    searchBooks: PropTypes.func.isRequired,
+  };
+
   state = {
     query: "",
   };
