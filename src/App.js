@@ -16,14 +16,13 @@ class BooksApp extends React.Component {
     this.getAllBooks();
   }
 
-  getAllBooks = () => {
-    BooksAPI.getAll().then((books) => {
-      this.setState({ books });
-    });
-  };
+  async getAllBooks() {
+    const books = await BooksAPI.getAll();
+    this.setState({ books });
+  }
 
-  updateBookShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf);
+  updateBookShelf = async (book, shelf) => {
+    await BooksAPI.update(book, shelf);
     this.getAllBooks();
   };
 

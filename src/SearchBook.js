@@ -9,13 +9,12 @@ class SearchBook extends Component {
     showingBooks: [],
   };
 
-  searchBooks = (query) => {
-    BooksAPI.search(query).then((showingBooks) => {
-      if ((showingBooks && "error" in showingBooks) || !showingBooks) {
-        showingBooks = [];
-      }
-      this.setState({ showingBooks });
-    });
+  searchBooks = async (query) => {
+    let showingBooks = await BooksAPI.search(query);
+    if ((showingBooks && "error" in showingBooks) || !showingBooks) {
+      showingBooks = [];
+    }
+    this.setState({ showingBooks });
   };
 
   whichShelf = (book) => {
