@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import BooksGrid from "./Booksgrid";
 import * as BooksAPI from "./BooksAPI";
+import PropTypes, { object } from "prop-types";
 
 import SearchBookBar from "./SearchBooksBar";
 
 class SearchBook extends Component {
+  static propTypes = {
+    books: PropTypes.arrayOf(object),
+    updateBookShelf: PropTypes.func.isRequired,
+  };
+
   state = {
     showingBooks: [],
   };
