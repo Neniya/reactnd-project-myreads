@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import Book from "./Book";
+import PropTypes, { object } from "prop-types";
 
 class BooksGrid extends Component {
+  static propTypes = {
+    books: PropTypes.arrayOf(object),
+    updateBookShelf: PropTypes.func.isRequired,
+    shelf: PropTypes.string,
+    isShelf: PropTypes.bool.isRequired,
+    whichShelf: PropTypes.func,
+  };
+
   render() {
     const filterBooks = this.props.isShelf
       ? this.props.books.filter((book) => book.shelf === this.props.shelf)
